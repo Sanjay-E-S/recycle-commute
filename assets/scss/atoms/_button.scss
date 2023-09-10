@@ -1,0 +1,27 @@
+.rc-button{
+    padding: 8px 24px;
+    font-weight: 300;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: $color-black;
+    color: $color-white;
+    transition: 0.3s;
+    border-radius: 20px;
+    border: 1px solid $color-black;
+    &:hover{
+        transition: 0.3s;
+        background-color: $color-white;
+        color: $color-black;
+        border-color: $color-black;
+    }
+    &--inv{
+        background-color: $color-white;
+        color: $color-black;
+        &:hover{
+            background-color: $color-black;
+            color: $color-white;
+        }
+    }
+}

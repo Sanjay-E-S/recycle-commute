@@ -1,0 +1,54 @@
+.rc-herosec{
+    padding-top: 40px;
+    &__outer{
+        width: 50%;
+    }
+    &__head{
+        font-size: 40px;
+        font-weight: 400;
+        color: $color-black;
+        margin-bottom: $spacer-4;
+    }
+    &__btnwrap{
+        margin: 0 -8px;
+        .rc-button{
+            margin: 0 8px;
+        }
+    }
+    &__bg{
+        min-height: 800px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@include tablet{
+    .rc-herosec{
+        &__outer{
+            width: 100%;
+        }
+        &__head{
+            font-size: 35px;
+        }
+        &__bg{
+            min-height: 450px;
+        }
+    }
+}
+
+@include mobile{
+    .rc-herosec{
+        padding-top: $spacer-3;
+        &__outer{
+            width: 100%;
+        }
+        &__head{
+            font-size: 35px;
+        }
+        &__bg{
+            margin-top: $spacer-3;
+            min-height: 200px;
+        }
+    }
+}

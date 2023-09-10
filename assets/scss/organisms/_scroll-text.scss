@@ -1,0 +1,51 @@
+.rc-scrollsec{
+    min-height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__main{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        padding: 8px 0;
+    }
+    &__outer{
+        display: flex;
+        animation: scrollText 10s infinite linear;
+        animation-delay: 4s;
+        h2{
+            font-size: 140px;
+            margin: 0 24px;
+        }
+    }
+}
+
+@include tablet{
+    .rc-scrollsec{
+        min-height: 450px;
+        &__outer{
+            h2{
+                font-size: 80px;
+            }
+        }
+    }
+}
+
+@include mobile{
+    .rc-scrollsec{
+        min-height: 200px;
+        &__outer{
+            animation-delay: unset;
+            h2{
+                font-size: 30px;
+                margin: 0 8px;
+            }
+        }
+    }
+}
+
+@keyframes scrollText {
+    from   { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+  }
