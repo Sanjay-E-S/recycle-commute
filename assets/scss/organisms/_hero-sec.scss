@@ -17,9 +17,53 @@
     }
     &__bg{
         min-height: 800px;
+        position: relative;
+        perspective: 1000px;
+        overflow: hidden;
+    }
+    &__bgimg{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        transform-style: preserve-3d;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 65%;
+        }
+    }
+    &__bgtext{
+        color: $color-orange;
+        font-size: 200px;
+        font-weight: 600;
+        position: absolute;
+        // color: transparent;
+        // -webkit-text-stroke: 2px $color-orange;
+        // text-stroke: 2px $color-orange;
+        // transform: translate(-50%,-50%);
+    }
+    &__text{
+        color: $color-orange;
+        font-size: 200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &__textstroke{
+        color: $color-orange;
+        font-size: 200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
     }
 }
 
